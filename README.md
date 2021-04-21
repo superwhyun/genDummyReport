@@ -15,8 +15,9 @@ pip install -r requirements.txt
 ```
 
 2. 실행
+```
 $ python lab_safety_report.py
-
+```
 3. 결과물 확인
 output 디렉토리에 파일이 생김.
 
