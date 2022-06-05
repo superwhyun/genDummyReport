@@ -5,12 +5,25 @@ import calendar
 
 
 class lab_safety_report():
-    def __init__(self, template_docx):
+    def __init__(self, template_docx, 
+            company='너네회사', 
+            name='우주정거장', 
+            buildingNo='999', 
+            roomNo='999', 
+            safety_manager='너', 
+            boss='너네보스'):
 
         self.num_rows = 29
         self.num_cols = 31
         self.doc = DocxTemplate(template_docx)
-        
+
+        self.company = company
+        self.name = name
+        self.buildingNo = buildingNo
+        self.roomNo = roomNo
+        self.safety_manager = safety_manager
+        self.boss =boss
+                
     
     def generate(self, output_docx, year, month, day=31):
         
@@ -24,12 +37,12 @@ class lab_safety_report():
                 'mon' : month
             },
             'lab': {
-                'company': '너네회사',
-                'name': '우주정거장',
-                'buildingNo': '은하철도',
-                'roomNo' : '999',
-                'safety_manager' : '실험실 관리자',
-                'boss' : '실장'
+                'company': self.company,
+                'name': self.name,
+                'buildingNo': self.buildingNo,
+                'roomNo' : self.roomNo,
+                'safety_manager' : self.safety_manager,
+                'boss' : self.boss
             },
             'myimage' : InlineImage(self.doc,'./resources/circle1.png',width=Mm(3)),
             'myimage2' : InlineImage(self.doc,'./resources/circle2.png',width=Mm(3)),
@@ -62,9 +75,9 @@ class lab_safety_report():
             cals.append(cal)
         return cals
 
-if __name__ == '__main__':
-    generator = lab_safety_report('./template/lab_safety_report_template.docx')
-    generator.generate('./output/lab_safety_report.docx', 2021,4,10)
+# if __name__ == '__main__':
+#     generator = lab_safety_report('./template/lab_safety_report_template.docx')
+#     generator.generate('./output/lab_safety_report.docx', 2021,4,10)
 
 
 
