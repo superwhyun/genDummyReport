@@ -7,7 +7,7 @@ import calendar
 class lab_safety_report():
     def __init__(self, template_docx):
 
-        self.num_rows = 26
+        self.num_rows = 29
         self.num_cols = 31
         self.doc = DocxTemplate(template_docx)
         
@@ -50,7 +50,7 @@ class lab_safety_report():
                 if i <= day: 
                     try:
                         weekday = calendar.weekday(year, month, i)
-                        if(r > 16 and r < self.num_rows -1 ): cal.append('-')
+                        if(r > 13 and r < self.num_rows -1 ): cal.append('-')
                         else:
                             if(weekday == 5 or weekday == 6): cal.append('-')
                             elif(weekday >= 0 and weekday < 5): cal.append('o')
