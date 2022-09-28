@@ -5,6 +5,7 @@
 ## install
 
 pip install -r requirements.txt
+mkdir output
 
 ## How to use
 
@@ -29,6 +30,10 @@ $ streamlit run streamlit_genReport.py
 ```
 2. 웹 브라우저에서 관련 내용 입력하고, 생성 후 다운로드
  
+ 
+### Known problems
+M1 맥북에서 실행할 때 다운로드 안 되는 경우 있음. HTTP Request 만들때 Unicode encoding 에러때문에 생긴건데.. 내가 수정해야 할 부분은 아닌것 같음.
+파일은 정상적을 잘 만들어짐.
 
 ### Future plan
 실제 국경일/공휴일 반영
