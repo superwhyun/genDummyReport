@@ -3,10 +3,10 @@
 별 쓸데도 없고 효과도 없고 생각도 없는 '허례'에 대응하기 위한 프로그램
 
 ## install
-
+```
 pip install -r requirements.txt
 mkdir output
-
+```
 ## How to use
 
 ### Terminal 에서 직접 실행하기
